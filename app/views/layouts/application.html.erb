@@ -9,77 +9,95 @@
   </head>
 
   <body>
-    <!-- Content goes here. -->
-    <div class="jumbotron">
-      <header class="container-fluid">
-          <%= image_tag("surf", id: "nlogo") %>
-      </header>
-      <h1 class="text-center">PADDLE PUPS CO. &amp; BLOG</h1>
+        <!-- Content goes here. -->
+        <header class="jumbotron">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                        <a class="navbar-brand" href="#">
+                            <img id="nlogo" alt="Brand" src="/img/surf.svg">
+                        </a>
+                    </div>
+                    <div>
+                        <p id="ntext" class="navbar-text">PADDLE PUPS CO. &amp; BLOG</p>
+                        <p id="navbr" class="navbar-text navbar-right">
+                            <a href="#">About</a>
+                            <a href="#">
+                  Search
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </a>
+                        </p>
+                    </div>
 
-
-    </div>  <!-- Header -->
-    <main class="container-fluid">
-      <div class="row">  <!--headline and social row -->
-      <div class="col-md-7 col-md-offset-2 col-xs-12">
-        <%= yield %>
-      </div>
-      <div class="col-md-3">
-        <%= image_tag("pup1", class: "img-circle img-responsive center-block") %>
-          <div class="row">
-              <div class="col-md-12">
-                  <h4 class="text-center">Jon Krouse</h4>
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <h1 id="ppups" class="text-center head">PADDLE PUPS</h1>
+            <p id="subline" class="text-center head">
+                A blog about dogs on surfboards
+            </p>
+        </header>
+        <main class="container-fluid">
+            <div class="row">
+              <%= yield %>
               </div>
-          </div>
-          <div class="row">
-              <div class="col-md-12">
-                  <p class="text-center">
-                      <a href="#">Twitter</a>
-                      <a href="#">Facebook</a>
-                      <a href="#">Instagram</a>
-                  </p>
-              </div>
-          </div>
-      </div>
-      <div class="row">  <!-- most popular posts headline here -->
-        <div class="col-md-12">
-          <h1 class="text-center">MOST POPULAR POSTS</h1>
-        </div>
-      </div>
-      <div class="row">  <!-- pictures linking to other posts here -->
-        <div class="col-md-3">
-          <%= image_tag("pup", class: "img-responsive") %>
-        </div>
-        <div class="col-md-3">
-          <%= image_tag("pup2", class: "img-responsive") %>
+            <div class="row">
+                <!-- most popular posts headline here -->
+                <div class="col-md-12 spacer">
+                    <h1 class="text-center">MOST POPULAR POSTS</h1>
+                </div>
+            </div>
+            <div class="row tint">
+                <!-- pictures linking to other posts here -->
+                <div class="col-md-3">
+                    <a href="#" class="relative"><img class="img-responsive de-tint" src="/img/pup.jpg" alt="coldpup" /></a>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="fixed">One Cold Pup</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="relative"><img class="img-responsive de-tint" src="/img/pup2.jpg" alt="hunkereddown" /></a>
+                    <h1 class="fixed">Hunkered Down</h1>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="relative"><img class="img-responsive de-tint" src="/img/pup3.jpg" alt="paddlinpup" /></a>
+                    <h1 class="fixed">Paddlin with</h1>
+                    <h1 id="bud" class="fixed">a Bud</h1>
+                </div>
+                <div class="col-md-3">
+                    <a href="#" class="relative"><img class="img-responsive de-tint" src="/img/pup4.jpg" alt="surfinpup" /></a>
+                    <h1 class="fixed">Top Dog</h1>
+                </div>
 
-        </div>
-        <div class="col-md-3">
-          <%= image_tag("pup3", class: "img-responsive") %>
+            </div>
+        </main>
+        <footer class="row">
+            <div class="col-md-6">
+                <p class="text-center">
+                    <span id="sun" class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> &copy; JK 2016
+                </p>
+            </div>
+            <div id="blink" class="col-md-6 text-center">
+                <a href="#">Dogs in clothes</a>
+                <a href="#">Dogs with hats</a>
+                <a href="#">Cats in clothes</a>
+                <a href="#">Sleepy cats</a>
 
-        </div>
-        <div class="col-md-3">
-          <%= image_tag("pup4", class: "img-responsive") %>
+            </div>
+        </footer>
+        <!-- footer with copyright and links here-->
+        <!-- Scripts go here. -->
+        <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
+        <script type="text/javascript" src="global.js"></script>
 
-        </div>
-
-      </div>
-    </main>
-    <footer class="row">
-      <div class="col-md-6">
-        <p class="text-center">
-          &copy; JK 2016
-        </p>
-      </div>
-      <div class="col-md-6">
-        <a href="#">Dogs in clothes</a>
-        <a href="#">Dogs with hats</a>
-        <a href="#">Cats in clothes</a>
-        <a href="#">Sleepy cats</a>
-
-      </div>
-    </footer>  <!-- footer with copyright and links here-->
-    <!-- Scripts go here. -->
-    <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
-    <script type="text/javascript" src="global.js"></script>
   </body>
 </html>
