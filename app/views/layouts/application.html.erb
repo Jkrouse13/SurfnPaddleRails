@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SurfnPaddleRails</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Content goes here. -->
+    <div class="jumbotron">
+      <header class="container-fluid">
+          <%= image_tag("surf", id: "nlogo") %>
+      </header>
+      <h1 class="text-center">PADDLE PUPS CO. &amp; BLOG</h1>
+
+
+    </div>  <!-- Header -->
+    <main class="container-fluid">
+      <div class="row">  <!--headline and social row -->
+      <div class="col-md-7 col-md-offset-2 col-xs-12">
+        <%= yield %>
+      </div>
+      <div class="col-md-3">
+        <%= image_tag("pup1", class: "img-circle img-responsive center-block") %>
+          <div class="row">
+              <div class="col-md-12">
+                  <h4 class="text-center">Jon Krouse</h4>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12">
+                  <p class="text-center">
+                      <a href="#">Twitter</a>
+                      <a href="#">Facebook</a>
+                      <a href="#">Instagram</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+      <div class="row">  <!-- most popular posts headline here -->
+        <div class="col-md-12">
+          <h1 class="text-center">MOST POPULAR POSTS</h1>
+        </div>
+      </div>
+      <div class="row">  <!-- pictures linking to other posts here -->
+        <div class="col-md-3">
+          <%= image_tag("pup", class: "img-responsive") %>
+        </div>
+        <div class="col-md-3">
+          <%= image_tag("pup2", class: "img-responsive") %>
+
+        </div>
+        <div class="col-md-3">
+          <%= image_tag("pup3", class: "img-responsive") %>
+
+        </div>
+        <div class="col-md-3">
+          <%= image_tag("pup4", class: "img-responsive") %>
+
+        </div>
+
+      </div>
+    </main>
+    <footer class="row">
+      <div class="col-md-6">
+        <p class="text-center">
+          &copy; JK 2016
+        </p>
+      </div>
+      <div class="col-md-6">
+        <a href="#">Dogs in clothes</a>
+        <a href="#">Dogs with hats</a>
+        <a href="#">Cats in clothes</a>
+        <a href="#">Sleepy cats</a>
+
+      </div>
+    </footer>  <!-- footer with copyright and links here-->
+    <!-- Scripts go here. -->
+    <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
+    <script type="text/javascript" src="global.js"></script>
+  </body>
+</html>
