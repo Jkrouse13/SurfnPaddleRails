@@ -3,9 +3,11 @@
   <head>
     <title>SurfnPaddleRails</title>
     <%= csrf_meta_tags %>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
   </head>
 
   <body>
@@ -21,9 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-                        <a class="navbar-brand" href="#">
-                            <img id="nlogo" alt="Brand" src="/img/surf.svg">
-                        </a>
+                          <%= link_to(image_tag("surf", id:"nlogo"), root_path, class: "navbar-brand") %>
                     </div>
                     <div>
                         <p id="ntext" class="navbar-text">PADDLE PUPS CO. &amp; BLOG</p>
@@ -48,37 +48,7 @@
             <div class="row">
               <%= yield %>
               </div>
-            <div class="row">
-                <!-- most popular posts headline here -->
-                <div class="col-md-12 spacer">
-                    <h1 class="text-center">MOST POPULAR POSTS</h1>
-                </div>
-            </div>
-            <div class="row tint">
-                <!-- pictures linking to other posts here -->
-                <div class="col-md-3">
-                    <a href="#" class="relative"><img class="img-responsive de-tint" src="/img/pup.jpg" alt="coldpup" /></a>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1 class="fixed">One Cold Pup</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="relative"><img class="img-responsive de-tint" src="/img/pup2.jpg" alt="hunkereddown" /></a>
-                    <h1 class="fixed">Hunkered Down</h1>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="relative"><img class="img-responsive de-tint" src="/img/pup3.jpg" alt="paddlinpup" /></a>
-                    <h1 class="fixed">Paddlin with</h1>
-                    <h1 id="bud" class="fixed">a Bud</h1>
-                </div>
-                <div class="col-md-3">
-                    <a href="#" class="relative"><img class="img-responsive de-tint" src="/img/pup4.jpg" alt="surfinpup" /></a>
-                    <h1 class="fixed">Top Dog</h1>
-                </div>
 
-            </div>
         </main>
         <footer class="row">
             <div class="col-md-6">
