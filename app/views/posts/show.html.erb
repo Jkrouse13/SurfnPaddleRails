@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-md-11">
                     <p>
-                        <%= "#{@post.author} on #{@post.created_at}" %>
+                        <%= "#{@post.author} on #{@post.created_at.strftime(" %B %d, %Y ")}" %>
                     </p>
                 </div>
             </div>
@@ -98,7 +98,7 @@
 <!-- pictures linking to other posts here -->
 <% @bottom_posts.each do |post| %>
 <div class="col-md-3">
-    <%= link_to(image_tag(post.image), post_path(id: post.id)) %>
+    <%= link_to(image_tag(post.image, class: "img-responsive de-tint"), post_path(id: post.id)) %>
     <div class="row">
         <div class="col-md-12">
             <h1 class="fixed"><%= post.title %></h1>

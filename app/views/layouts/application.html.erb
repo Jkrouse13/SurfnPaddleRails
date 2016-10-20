@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SurfnPaddleRails</title>
+    <title><%= @post.title %></title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -28,7 +28,7 @@
                     <div>
                         <p id="ntext" class="navbar-text">PADDLE PUPS CO. &amp; BLOG</p>
                         <p id="navbr" class="navbar-text navbar-right">
-                            <a href="#">About</a>
+                            <%= link_to("About", about_path) %>
                             <a href="#">
                   Search
                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
