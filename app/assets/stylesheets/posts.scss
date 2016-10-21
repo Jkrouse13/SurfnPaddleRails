@@ -1,0 +1,131 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+    background-image: url(/img/wave2.jpg);
+    background-color: rgb(73, 154, 138);
+    background-size: cover;
+    padding-top: 0;
+    padding-bottom: 200px;
+    background-blend-mode: lighten;
+}
+
+p {
+    color: rgb(95, 97, 113);
+    font-size: large;
+}
+
+nav {
+    background-color: transparent;
+}
+
+.navbar {
+    background-color: transparent;
+    border: 0;
+    color: #003254;
+}
+
+#most-pop{
+    font-size: 55px;
+}
+
+#side-story{
+    font-size: medium;
+    color: rgb(100, 100, 100);
+}
+
+#quote {
+    border-left: 2px solid rgb(95, 97, 113);
+    height: 40px;
+}
+
+#nlogo {
+    transform: scale(.8);
+    display: inline-block;
+    margin-top: -20px;
+}
+
+#sun {
+    font-size: 30px;
+}
+
+#blink {
+    margin-top: 10px;
+}
+
+#navbr {
+    margin-right: 40px;
+    font-weight: 400;
+}
+
+#ntext {
+    color: #003254;
+}
+
+#subline {
+    font-weight: 400;
+}
+
+#ppups {
+    margin-top: 100px;
+    color: #003254;
+}
+
+.tint {
+    background-color: #003254;
+}
+
+.de-tint {
+    opacity: 0.6;
+    transform: scaleX(1.106);
+    transition: all .3s ease;
+    width: 25vw;
+}
+
+.de-tint:hover {
+    opacity: 1;
+}
+
+.socbutton {
+    background-color: #003254;
+    margin-left: 10px;
+    transition: all .3s ease;
+    margin-top: 15px;
+}
+
+.socbutton:hover {
+    background-color: rgb(73, 154, 138);
+}
+
+.sbutton {
+    margin-top: 10px;
+}
+
+.big-h {
+    font-size: 65px;
+}
+
+.head {
+    color: #003254;
+    margin-top: 10px;
+}
+
+.spacer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: absolute;
+    bottom: 40px;
+    color: rgb(73, 154, 138);
+}
+
+#bud {
+    bottom: 10px;
+}
