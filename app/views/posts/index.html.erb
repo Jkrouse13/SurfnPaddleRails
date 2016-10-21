@@ -1,4 +1,16 @@
+<%= form_tag(posts_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+<%= submit_tag "Search" %>
+<% end %>
+
+<% if @posts.present? %>
+  <%= render @posts %>
+<% else %>
+  <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+<% end %>
+
 <div class="col-md-7 col-md-offset-2 col-xs-12">
+
     <!-- first coloumn -->
     <div class="row">
         <div class="col-md-12">
@@ -6,7 +18,7 @@
 
             <div class="row">
                 <div class="col-md-1">
-                    <%= link_to(image_tag(@post.profile_pic.to_s, class:"img-circle img-responsive"), post_path(id: @post.id)) %>
+                    <%= link_to(image_tag(@post.image.to_s, class:"img-circle img-responsive"), post_path(id: @post.id)) %>
                 </div>
                 <div class="col-md-11">
                     <p>
@@ -54,7 +66,7 @@
 </div>
 <div class="col-md-3">
     <!-- Second coloumn -->
-    <%= image_tag(@post.profile_pic.to_s,class: "img-circle img-responsive center-block", id: "socialpic") %>
+    <%= image_tag(@post.image.to_s,class: "img-circle img-responsive center-block", id: "socialpic") %>
     <div class="row">
         <div class="col-md-12">
             <h4 class="text-center"><%= @post.author %></h4>
@@ -86,6 +98,7 @@
                 <%= @bottom_posts.last.body.truncate(160) %>
                 </p>
         </div>
+    </div>
 </div>
 </div>
 <div class="row">

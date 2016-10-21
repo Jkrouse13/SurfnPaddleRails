@@ -1,4 +1,5 @@
 <div class="col-md-7 col-md-offset-2 col-xs-12">
+
     <!-- first coloumn -->
     <div class="row">
         <div class="col-md-12">
@@ -6,7 +7,7 @@
 
             <div class="row">
                 <div class="col-md-1">
-                    <%= link_to(image_tag(@post.image.to_s, class:"img-circle img-responsive"), post_path(id: @post.id)) %>
+                    <%= link_to(image_tag(@post.profile_pic.to_s, class:"img-circle img-responsive"), post_path(id: @post.id)) %>
                 </div>
                 <div class="col-md-11">
                     <p>
@@ -17,7 +18,8 @@
         </div>
         <div class="col-md-12 col-xs-12">
             <p>
-                <%= simple_format(@post.body)%></p>
+                <%= simple_format(@post.body)%>
+            </p>
         </div>
     </div>
     <div class="row">
@@ -54,7 +56,7 @@
 </div>
 <div class="col-md-3">
     <!-- Second coloumn -->
-    <%= image_tag(@post.image.to_s,class: "img-circle img-responsive center-block", id: "socialpic") %>
+    <%= image_tag(@post.profile_pic.to_s,class: "img-circle img-responsive center-block", id: "socialpic") %>
     <div class="row">
         <div class="col-md-12">
             <h4 class="text-center"><%= @post.author %></h4>

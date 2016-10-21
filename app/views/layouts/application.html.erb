@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= @post.title %></title>
-    <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <head>
+        <title><%= @post.title %></title>
+        <%= csrf_meta_tags %>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
-  </head>
+    </head>
 
-  <body>
+    <body>
         <!-- Content goes here. -->
         <header class="jumbotron">
             <nav class="navbar navbar-default">
@@ -18,21 +18,26 @@
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-                          <%= link_to(image_tag("surf", id:"nlogo"), root_path, class: "navbar-brand") %>
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <%= link_to(image_tag("surf", id:"nlogo"), root_path, class: "navbar-brand") %>
                     </div>
                     <div>
                         <p id="ntext" class="navbar-text">PADDLE PUPS CO. &amp; BLOG</p>
                         <p id="navbr" class="navbar-text navbar-right">
                             <%= link_to("About", about_path) %>
-                            <a href="#">
-                  Search
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                </a>
+                            <form class="navbar-form navbar-right" role="search">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Search">
+                                </div>
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </button>
+                            </form>
+
                         </p>
                     </div>
 
@@ -46,14 +51,15 @@
         </header>
         <main class="container-fluid">
             <div class="row">
-              <%= yield %>
-              </div>
+                <%= yield %>
+            </div>
 
         </main>
         <footer class="row">
             <div class="col-md-6">
                 <p class="text-center">
-                    <span id="sun" class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span> &copy; JK 2016
+                    <span id="sun" class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
+                    &copy; JK 2016
                 </p>
             </div>
             <div id="blink" class="col-md-6 text-center">
@@ -69,5 +75,5 @@
         <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch"></script>
         <script type="text/javascript" src="global.js"></script>
 
-  </body>
+    </body>
 </html>

@@ -1,20 +1,22 @@
 class Post
 
-  attr_accessor :id, :title, :body, :author, :created_at, :image
+  attr_accessor :id, :title, :body, :author, :created_at, :image, :profile_pic
 
   def initialize(args)
-    self.id         = args[:id]
-    self.title      = args[:title]
-    self.body       = args[:body]
-    self.author     = args[:author]
-    self.created_at = args[:created_at] || Time.now
-    self.image      = args[:image]
+    self.id          = args[:id]
+    self.title       = args[:title]
+    self.body        = args[:body]
+    self.author      = args[:author]
+    self.created_at  = args[:created_at] || Time.now
+    self.image       = args[:image]
+    self.profile_pic = args[:profile_pic]
   end
 
   def self.all
     unless defined?(@posts)
       @posts = [
         Post.new(
+          profile_pic: "aesop",
           id: 1,
           image: "pup",
           title:  "The Apes and The Two Travelers",
@@ -41,6 +43,7 @@ class Post
           created_at:   rand(6).months.ago
         ),
         Post.new(
+          profile_pic: "mark",
           id: 2,
           image: "pup2",
           title: "Plymouth Rock and the Pilgrims",
@@ -63,6 +66,7 @@ class Post
           created_at:   rand(6).months.ago
         ),
         Post.new(
+          profile_pic: "sirarthur",
           id: 3,
           image: "pup3",
           title:  "The Lady in Pink",
@@ -89,6 +93,7 @@ class Post
           created_at:   rand(6).months.ago
         ),
         Post.new(
+          profile_pic: "dfwallace",
           id: 4,
           image: "pup4",
           title:  "Consider the Lobster",
@@ -115,6 +120,7 @@ class Post
           created_at:   rand(6).months.ago
         ),
         Post.new(
+          profile_pic: "stanley",
           id: 5,
           image: "pup5",
           title:  "Dr. Strangelove (or, how I learned to stop worrying and love the bomb)",
@@ -149,5 +155,10 @@ class Post
     all.select{|post| post.id == id}.first
   end
 
+
+  def self.search(search)
+    where("title LIKE ?", "%#{search}%")
+    where("body LIKE ?", "%#{search}%")
+  end
 
 end
